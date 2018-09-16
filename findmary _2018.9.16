@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace findmary_916
+
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string file = "aaamarybvvvmaryaaaamary";
+            int result = 0;
+            int maryindex = file.IndexOf('m');
+            //Console.WriteLine(maryindex);
+            Console.WriteLine("mary的位置为：");
+            if (maryindex != -1) result = 1;
+            Console.WriteLine(maryindex+1);
+
+
+            while(result!=0)
+            {
+                maryindex = file.IndexOf('m', maryindex + 1, 21 - maryindex);
+                //string textmary = file.Substring(maryindex+1,22 );
+
+                if (maryindex == -1) break;
+                
+    
+                    Console.WriteLine(maryindex + 1);
+                
+
+            } 
+           
+            Console.ReadLine();
+        }
+    }
+}
